@@ -1,8 +1,4 @@
-const express = require("express");
-const app = express();
-app.get('/',function(req,res){
-    res.send("Hello");
-});
-app.listen('8080',function(){
-    console.log("Server is running");
-});
+import { showData,runServer } from './router.js';
+import { data_json } from './data.js';
+showData(data_json);
+runServer();
